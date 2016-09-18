@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simple Flashcards App Using JSON</title>
+	<title>Flashcard App Using JSON</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
 <div class = "flashCardContainer">
-
-	<header>
-		<h1>SIMPLE FLASHCARDS JSON APP.</h1>
-	</header>
-	<div class="row">
-		<div class="col-md-6" id ="flashCard1"><h2>What is 1 + 1?</h2></div>
-		<br>
-		    <!-- creates a button that fires and event which triggers our function called loadJson() which is on the flashCards.js file.-->
-		    <button type ="button" class="btn btn-primary btn-lg btn-block" onclick = "loadJSON()">Click for Answer.</button>
+	<div class="container">
+		
+	    <div class="jumbotron">
+			<header>
+				<h1>SIMPLE FLASHCARDS JSON APP.</h1>
+			</header>
 		</div>
-		<br>
 
-		<div class="col-md-6" id ="flashCard2"><h2>What is 2 + 1?</h2></div>
-		<br>
-		    <!-- creates a button that fires and event which triggers our function called loadJson() which is on the flashCards.js file.-->
-		    <button type ="button" class="btn btn-primary btn-lg btn-block" onclick = "loadJSONTwo()">Click for Answer.</button>
-		</div>
-		<br>
+			<div class="row">
+
+				<div class="col-md-8" id ="flashCard1"><h2>What is a Primitive?</h2>
+				<br>
+				    <!-- creates a button that fires and event which triggers our function called loadJson() which is on the flashCards.js file.-->
+				    <button type ="button" class="btn btn-primary" onclick = "loadJSON()">Click for Answer.</button>
+				<br>
+				</div>
+
+				<div class="col-md-8" id ="flashCard2"><h2>What is a Response header?</h2>
+				<br>
+				    <!-- creates a button that fires and event which triggers our function called loadJson() which is on the flashCards.js file.-->
+				    <button type ="button" class="btn btn-primary" onclick = "loadJSONTwo()">Click for Answer.</button>
+				</div>
+
+				<div class="col-md-8" id ="flashCard3"><h2>What is a Statement?</h2>
+				<br>
+				    <!-- creates a button that fires and event which triggers our function called loadJson() which is on the flashCards.js file.-->
+				    <button type ="button" class="btn btn-primary" onclick = "loadJSONThree()">Click for Answer.</button>
+				<br>
+				</div>
+
+			</div>
 	</div>
-  
-
-<!-- include external flashCards.js script. -->
-<script src="flashCards.js"></script>
+		<br>
+</div>
+	<!-- include external flashCards.js script. -->
+	<script src="flashCards.js"></script>
 
 </body>
 </html>

@@ -1,10 +1,9 @@
 [  
    {  
-      "flashCard1":"2",
-      "flashCard2":"3"
+      "flashCard1":"A Primitive (Primitive value, Primitive data type) is data that is not an object and has no methods.  In JavaScript, there are 6 primitive data types: string, number, boolean, null, undefined, symbol.  All primitives are immutable (cannot be changed).",
+      "flashCard2":"A Response Header is an HTTP header that can be used in an HTTP request and that doesn't relate to the content of the message.  Response headers, like Age, Location or Server are used to give a more detailed context of the response.",
+      "flashCard3":"A JavaScript program is a collection of statements. JavaScript statements combine expressions in such a way that they carry out one complete task.."
+
    }
 ]
 
-// i've uploaded these values to http://www2.hawaii.edu/~travis27/jsonData/flashCards.json 
-//where it can be available online.
-// add more values for more flash cards. like "flashCard3":"value".

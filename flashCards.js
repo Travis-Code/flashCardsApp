@@ -1,4 +1,6 @@
 var dataFileForFlashCards = "http://www2.hawaii.edu/~travis27/jsonData/flashCards.json";
+
+// var dataFileForFlashCards = "http://www2.hawaii.edu/~travis27/jsonData/flashCards.json";
 //data_file gets the json file located on a specific site or directory in this case it is the flashCards.json which holds our json data that holds the answers to our questions.
 var http_request = new XMLHttpRequest();
 
@@ -14,7 +16,7 @@ function loadJSON(){
          // jsonObj variable now contains the data structure and can
          // be accessed as jsonObj.flashCard1 and jsonObj.flashCard2.
 
-         document.getElementById("flashCard1").innerHTML ="<h2>What is 1 + 1?</h2>" + jsonObj[0].flashCard1;
+         document.getElementById("flashCard1").innerHTML ="<h2>What is a Primitive?</h2>" + jsonObj[0].flashCard1;
          // document.getElementById gets the "flashCard1" and "flashCard2 id's" on the html page.   
          // we then append the values from our jsonObj to these id's<h2> 
       }
@@ -26,11 +28,22 @@ function loadJSONTwo(){
    http_request.onreadystatechange = function(){
       if (http_request.readyState == 4){
          var jsonObj = JSON.parse(http_request.responseText);
-         document.getElementById("flashCard2").innerHTML = "<h2>What is 2 + 1?</h2>" + jsonObj[0].flashCard2;
+         document.getElementById("flashCard2").innerHTML = "<h2>What is a Response header?</h2>" + jsonObj[0].flashCard2;
       }
    }
 dataFileForFlashCardsReqSend();
 }
+
+function loadJSONThree(){
+   http_request.onreadystatechange = function(){
+      if (http_request.readyState == 4){
+         var jsonObj = JSON.parse(http_request.responseText);
+         document.getElementById("flashCard3").innerHTML = "<h2>What is a Statement?</h2>" + jsonObj[0].flashCard3;
+      }
+   }
+dataFileForFlashCardsReqSend();
+}
+
 
 function dataFileForFlashCardsReqSend(){
 // this function is used to keep code dry for the loadJSON functions.
