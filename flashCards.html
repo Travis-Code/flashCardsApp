@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Flash Cards App Using JSON</title>
+</head>
+<body>
+
+<div class = "flashCardContainer">
+   <div class="row">
+		<div class="col-md-6" id ="flashCard1"><h2>What is 1 + 1?</h2></div>
+		<div class="col-md-6" id ="flashCard2"><h2>What is 2 + 1?</h2></div>
+    </div>
+    <br>
+    <!-- creates a button that fires and event which triggers our function called loadJson() which is on the flashCards.js file.-->
+    <button type ="button" class="btn btn-primary btn-lg btn-block" onclick = "loadJSON()">Click for Answer.</button>
+</div>
+    <br>
+
+<!-- include external flashCards.js script. -->
+<script src="flashCards.js"></script>
+
+</body>
+
+</html>
+ 
