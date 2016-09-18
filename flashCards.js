@@ -2,12 +2,6 @@ var dataFileForFlashCards = "http://www2.hawaii.edu/~travis27/jsonData/flashCard
 //data_file gets the json file located on a specific site or directory in this case it is the flashCards.json which holds our json data that holds the answers to our questions.
 var http_request = new XMLHttpRequest();
 
-function dataFileForFlashCardsReqSend(){
-// this function is used to keep code dry for the loadJSON functions.
-   http_request.open("GET", dataFileForFlashCards, true);
-   http_request.send();
-}
-
 function loadJSON(){
    //loadJSON(); everything in this function will get called when a user clicks on the button on the html page.
 
@@ -38,4 +32,8 @@ function loadJSONTwo(){
 dataFileForFlashCardsReqSend();
 }
 
-
+function dataFileForFlashCardsReqSend(){
+// this function is used to keep code dry for the loadJSON functions.
+   http_request.open("GET", dataFileForFlashCards, true);
+   http_request.send();
+}
