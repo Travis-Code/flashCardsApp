@@ -1,6 +1,12 @@
-var data_file = "http://www2.hawaii.edu/~travis27/jsonData/flashCards.json";
+var dataFileForFlashCards = "http://www2.hawaii.edu/~travis27/jsonData/flashCards.json";
 //data_file gets the json file located on a specific site or directory in this case it is the flashCards.json which holds our json data that holds the answers to our questions.
 var http_request = new XMLHttpRequest();
+
+function dataFileForFlashCardsReqSend(){
+// this function is used to keep code dry for the loadJSON functions.
+   http_request.open("GET", dataFileForFlashCards, true);
+   http_request.send();
+}
 
 function loadJSON(){
    //loadJSON(); everything in this function will get called when a user clicks on the button on the html page.
@@ -19,9 +25,7 @@ function loadJSON(){
          // we then append the values from our jsonObj to these id's<h2> 
       }
    }
-
-   http_request.open("GET", data_file, true);
-   http_request.send();
+dataFileForFlashCardsReqSend();
 }
 
 function loadJSONTwo(){
@@ -31,12 +35,7 @@ function loadJSONTwo(){
          document.getElementById("flashCard2").innerHTML = "<h2>What is 2 + 1?</h2>" + jsonObj[0].flashCard2;
       }
    }
-
-http_request.open("GET", data_file, true);
-http_request.send();
+dataFileForFlashCardsReqSend();
 }
-
-
-
 
 
